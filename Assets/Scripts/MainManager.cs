@@ -70,7 +70,7 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(m_Points > 0)
+        if(m_Points > 0 && m_Points > GameManager.Instance.HiScore)
         {
             GameManager.Instance.UpdateHiScore(m_Points);
         }
