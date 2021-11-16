@@ -70,6 +70,11 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
+        if(m_Points > 0)
+        {
+            GameManager.Instance.UpdateHiScore(m_Points);
+        }
+
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
